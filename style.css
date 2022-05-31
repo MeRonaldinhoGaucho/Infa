@@ -75,7 +75,7 @@ a{
     position: relative;
     height: 300px;
     transform-style: preserve-3d;
-    transition: transform 500ms ease-in-out;
+    transition: transform 1500ms ease-in-out;
 }
 .question:hover{
     transform: rotateX(90deg);
