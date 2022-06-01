@@ -336,6 +336,7 @@ transition: all 0.5s;
 	justify-content: center;
 	align-content: center;
 	height: 300px;
+	  margin-bottom: 200px;
   }
   
   .grid img {
