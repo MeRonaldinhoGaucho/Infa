@@ -371,7 +371,7 @@ box-shadow: 0px 0px 24px 13px rgba(66, 68, 90, 1);
   }
   
   #lightbox img {
-	width: 900px;
+	width: 75%;
 	height: 1400px;
 	padding: 4px;
 	background-color: black;
@@ -387,7 +387,7 @@ box-shadow: 0px 0px 24px 13px rgba(66, 68, 90, 1);
       align-items: center;
       text-align: center;
       font-size: 100;
-	  right: 200px;
+	  right: 15%;
       top: -550px;
 	  display: none;
 	z-index: 10000;
