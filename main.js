@@ -141,7 +141,7 @@ images.forEach(image => {
     button2.style.display = "block"
     lightbox.classList.add('active')
     const img = document.createElement('img')
-    img.src = "img/recenzja4"
+    img.src = "img/recenzja"
     while (lightbox.firstChild) {
       lightbox.removeChild(lightbox.firstChild)
     }
