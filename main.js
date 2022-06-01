@@ -8,6 +8,7 @@ let footer = document.querySelector('footer')
 console.log(footer)
 let last = document.querySelector('.last')
 let links = document.querySelectorAll('a')
+let recenzjaicon = document.querySelector(".recenzja-icon")
 
 
 console.log(button)
@@ -22,6 +23,7 @@ const changeclass = () => {
 
 
         if(counter == 0){
+            recenzjaicon.src = "img/recenzja5"
             body.style.backgroundColor = "rgb(0, 43, 52)"
             body.style.color = "#eee"
             for(let i of autors){
@@ -47,6 +49,7 @@ const changeclass = () => {
             counter = 1
         }
         else{
+            recenzjaicon.src = "img/recenzja4"
             body.style.backgroundColor = "rgb(231, 251, 255)"
             for(let i of autors){
                 console.log(i)
