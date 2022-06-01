@@ -85,3 +85,82 @@ const changeclass = () => {
 
 button.addEventListener('click', changeclass)
 
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
+
+// overlay.addEventListener('click', () => {
+//   const modals = document.querySelectorAll('.modal.active')
+//   modals.forEach(modal => {
+//     closeModal(modal)
+//   })
+// })
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
+}
+
+const lightbox = document.createElement('div')
+let grid = document.querySelector(".grid")
+let button2 = document.createElement('div')
+lightbox.id = 'lightbox'
+
+console.log(grid)
+button2.classList.add('button-lightbox')
+grid.appendChild(lightbox)
+grid.appendChild(button2)
+button2.innerHTML = "<span class=\"close\">&times;</span>"
+
+
+const images = document.querySelectorAll('.recenzja-img')
+images.forEach(image => {
+  image.addEventListener('click', e => {
+  body.classList.add('dark-lightbox')
+    button2.style.display = "block"
+    lightbox.classList.add('active')
+    const img = document.createElement('img')
+    img.src = image.src
+    while (lightbox.firstChild) {
+      lightbox.removeChild(lightbox.firstChild)
+    }
+    lightbox.appendChild(img)
+  })
+})
+
+button2.addEventListener('click', e => {
+  if (e.target !== e.currentTarget){
+    button2.style.display = "none"
+  body.classList.remove('dark-lightbox')
+  lightbox.classList.remove('active')
+  return}
+  else{lightbox.classList.remove('active')
+  body.classList.remove('dark-lightbox')
+
+}
+
+})
+
+
+
