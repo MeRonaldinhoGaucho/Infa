@@ -26,6 +26,7 @@ const changeclass = () => {
             recenzjaicon.src = "img/recenzja5"
             body.style.backgroundColor = "rgb(0, 43, 52)"
             body.style.color = "#eee"
+            footer.style.color = "white"
             for(let i of autors){
                 console.log(i)
                 i.classList.add('darkautor')
